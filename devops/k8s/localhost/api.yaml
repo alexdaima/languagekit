@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http-localhost-srv
+      protocol: TCP
+      port: 8000
+      targetPort: 8000
+    - name: http-localhost-src
+      protocol: TCP
+      port: 8001
+      targetPort: 8001
+  selector:
+    app: backend
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: hexpm/elixir:1.15.7-erlang-26.1.2-debian-bookworm-20231009
+          imagePullPolicy: Never
+          command: ["tail", "-f", "/src/README.md"]
+          ports:
+            - containerPort: 4000
+            - containerPort: 4001
+          volumeMounts:
+            - name: ext4-backend-code
+              mountPath: /src
+          resources:
+            requests:
+              memory: "2048Mi"
+              cpu: "1024m"
+            limits:
+              memory: "2048Mi"
+              cpu: "1024m"
+      volumes:
+        - name: ext4-backend-code
+          hostPath:
+            path: <BACKEND_CODE_PATH>
