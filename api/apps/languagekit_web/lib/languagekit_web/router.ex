@@ -2,11 +2,30 @@ defmodule LanguagekitWeb.Router do
   use LanguagekitWeb, :router
 
   pipeline :api do
+    plug CORSPlug, origin: "*"
     plug :accepts, ["json"]
   end
 
   scope "/api", LanguagekitWeb do
     pipe_through :api
+  end
+
+  pipeline :graphql do
+    plug CORSPlug, origin: "*"
+    plug :accepts, ["json"]
+    plug Languagekit.Absinthe.Context
+  end
+
+  scope "/graphql" do
+    pipe_through :graphql
+
+    post "/", Absinthe.Plug,
+      schema: LanguagekitWeb.Schema,
+      adapter: LanguagekitWeb.AbsintheAdapter
+
+    options "/", Absinthe.Plug,
+      schema: LanguagekitWeb.Schema,
+      adapter: LanguagekitWeb.AbsintheAdapter
   end
 
   # Enable LiveDashboard in development

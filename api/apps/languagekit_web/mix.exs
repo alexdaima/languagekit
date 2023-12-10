@@ -43,7 +43,12 @@ defmodule LanguagekitWeb.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:languagekit, in_umbrella: true},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      {:absinthe, "~> 1.7.6"},
+      {:absinthe_plug, "~> 1.5.8"},
+      {:cors_plug, "~> 3.0.3"},
+      {:inflex, "~> 2.1.0"},
+      {:absinthe_phoenix, "~> 2.0.2"}
     ]
   end
 
