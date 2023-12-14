@@ -10,6 +10,15 @@ config :languagekit, Languagekit.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
+config :users, Users.Repo,
+  username: "languagekit",
+  password: "languagekit",
+  hostname: "postgres-0",
+  database: "users_dev",
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -25,6 +34,10 @@ config :languagekit_web, LanguagekitWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "A0ub0e/zIcbucqaFF6BrGY6R0NdqZNdoZN9co4MYYGZKbE8TH4HTLkYjzu7wLgf2",
   watchers: []
+
+config :users, Users.Guardian,
+  issuer: "languagekit",
+  secret_key: "dhXVeuozzrIOD/54X7IST884tY6pPCwwtLuGOoKSUBYXabgFEP8jsSlrE6wO069O"
 
 # ## SSL Support
 #

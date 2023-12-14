@@ -13,7 +13,7 @@ defmodule LanguagekitWeb.Router do
   pipeline :graphql do
     plug CORSPlug, origin: "*"
     plug :accepts, ["json"]
-    plug Languagekit.Absinthe.Context
+    plug LanguagekitWeb.Absinthe.Context
   end
 
   scope "/graphql" do

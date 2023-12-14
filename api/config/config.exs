@@ -17,6 +17,10 @@ config :languagekit_web,
   ecto_repos: [Languagekit.Repo],
   generators: [context_app: :languagekit]
 
+config :users,
+  ecto_repos: [Users.Repo],
+  generators: [context_app: :languagekit]
+
 # Configures the endpoint
 config :languagekit_web, LanguagekitWeb.Endpoint,
   url: [host: "localhost"],
