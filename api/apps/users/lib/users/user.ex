@@ -2,7 +2,7 @@ defmodule Users.Users.User do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key {:id, :string, autogenerate: True}
+  @primary_key {:id, :string, autogenerate: false}
   @timestamps_opts [type: :naive_datetime_usec]
   schema "users" do
     field(:username, :string)

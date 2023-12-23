@@ -19,6 +19,15 @@ config :users, Users.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
+config :languages, Languages.Repo,
+  username: "languagekit",
+  password: "languagekit",
+  hostname: "postgres-0",
+  database: "languages_dev",
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #

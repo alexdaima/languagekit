@@ -49,7 +49,8 @@ defmodule LanguagekitWeb.MixProject do
       {:cors_plug, "~> 3.0.3"},
       {:inflex, "~> 2.1.0"},
       {:absinthe_phoenix, "~> 2.0.2"},
-      {:users, in_umbrella: true}
+      {:users, in_umbrella: true},
+      {:languages, in_umbrella: true}
     ]
   end
 
