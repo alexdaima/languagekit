@@ -1,9 +1,7 @@
 #!/bin/bash
 
-
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 KUBEPATH=$SCRIPT_DIR/k8s/localhost
-
 
 API_CODE_PATH=$(cd $SCRIPT_DIR/../api && pwd)
 cp $KUBEPATH/api.yaml $KUBEPATH/api.modified.yaml 

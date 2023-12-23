@@ -7,12 +7,12 @@ spec:
   ports:
     - name: http-localhost-srv
       protocol: TCP
-      port: 8000
-      targetPort: 8000
+      port: 4000
+      targetPort: 4000
     - name: http-localhost-src
       protocol: TCP
-      port: 8001
-      targetPort: 8001
+      port: 4001
+      targetPort: 4001
   selector:
     app: api
 ---

@@ -1,6 +1,5 @@
 defmodule Users.Users.Schema do
   use Absinthe.Schema.Notation
-
   alias Users.{Repo, Users.User}
 
   object :UserAuth do
@@ -31,6 +30,7 @@ defmodule Users.Users.Schema do
       arg(:password, non_null(:string))
 
       resolve(fn %{username: username, password: password}, _info ->
+        username = username |> String.downcase()
         case Repo.get_by(User, username: username) do
           nil ->
             {:error, "Could not find a user with this username"}
@@ -59,12 +59,13 @@ defmodule Users.Users.Schema do
       arg(:password, non_null(:string))
 
       resolve(fn %{username: username, password: password}, _info ->
+        username = username |> String.downcase()
         case Repo.get_by(User, username: username) do
           nil ->
             new_user_id = Ecto.UUID.generate()
 
             attrs = %{
-              :username => username |> String.downcase(),
+              :username => username,
               :password => Argon2.hash_pwd_salt(password)
             }
 

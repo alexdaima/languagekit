@@ -3,13 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FAF86CF32B253D99009D513B /* LanguageKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF86CF22B253D99009D513B /* LanguageKitApp.swift */; };
+		FA08D1322B2C60B100D63EB3 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08D1312B2C60B100D63EB3 /* App.swift */; };
+		FA08D1342B2C61D300D63EB3 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08D1332B2C61D300D63EB3 /* GlobalState.swift */; };
+		FA7E98182B35E65A00D3C5F8 /* AbsintheSocketTransport in Frameworks */ = {isa = PBXBuildFile; productRef = FA7E98172B35E65A00D3C5F8 /* AbsintheSocketTransport */; };
+		FA7E981A2B35E6C100D3C5F8 /* HelloWorld.graphql in Resources */ = {isa = PBXBuildFile; fileRef = FA7E98192B35E6C100D3C5F8 /* HelloWorld.graphql */; };
+		FAAB08412B2C8D4A0088F36F /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB08402B2C8D4A0088F36F /* Pages.swift */; };
+		FAAB08442B2CB87A0088F36F /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB08432B2CB87A0088F36F /* Header.swift */; };
+		FAAB08472B2CBCE60088F36F /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB08462B2CBCE60088F36F /* Apollo */; };
+		FAAB08492B2CBCE60088F36F /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB08482B2CBCE60088F36F /* ApolloAPI */; };
+		FAAB084B2B2CBCE60088F36F /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB084A2B2CBCE60088F36F /* ApolloSQLite */; };
+		FAAB084D2B2CBCE60088F36F /* ApolloTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB084C2B2CBCE60088F36F /* ApolloTestSupport */; };
+		FAAB084F2B2D39130088F36F /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB084E2B2D39130088F36F /* LandingPage.swift */; };
+		FAAB08512B2D3EB70088F36F /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB08502B2D3EB70088F36F /* Client.swift */; };
+		FAAB08532B2D3F6A0088F36F /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB08522B2D3F6A0088F36F /* ApolloWebSocket */; };
+		FAAB08552B2D40010088F36F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB08542B2D40010088F36F /* Config.swift */; };
+		FAAB085B2B2DE52A0088F36F /* LanguageKitAPI in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB085A2B2DE52A0088F36F /* LanguageKitAPI */; };
+		FAAB085E2B2E93470088F36F /* Signup.graphql in Resources */ = {isa = PBXBuildFile; fileRef = FAAB085D2B2E93470088F36F /* Signup.graphql */; };
+		FAAB08602B2E93560088F36F /* Login.graphql in Resources */ = {isa = PBXBuildFile; fileRef = FAAB085F2B2E93560088F36F /* Login.graphql */; };
 		FAF86CF52B253D99009D513B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF86CF42B253D99009D513B /* ContentView.swift */; };
-		FAF86CF72B253D99009D513B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF86CF62B253D99009D513B /* Item.swift */; };
 		FAF86CF92B253D9B009D513B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF86CF82B253D9B009D513B /* Assets.xcassets */; };
 		FAF86CFC2B253D9B009D513B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF86CFB2B253D9B009D513B /* Preview Assets.xcassets */; };
 		FAF86D062B253D9C009D513B /* LanguageKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF86D052B253D9C009D513B /* LanguageKitTests.swift */; };
@@ -35,10 +50,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA08D1312B2C60B100D63EB3 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		FA08D1332B2C61D300D63EB3 /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
+		FA7E98192B35E6C100D3C5F8 /* HelloWorld.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = HelloWorld.graphql; sourceTree = "<group>"; };
+		FAAB08402B2C8D4A0088F36F /* Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
+		FAAB08432B2CB87A0088F36F /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		FAAB084E2B2D39130088F36F /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		FAAB08502B2D3EB70088F36F /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		FAAB08542B2D40010088F36F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		FAAB085D2B2E93470088F36F /* Signup.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Signup.graphql; sourceTree = "<group>"; };
+		FAAB085F2B2E93560088F36F /* Login.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Login.graphql; sourceTree = "<group>"; };
 		FAF86CEF2B253D99009D513B /* LanguageKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAF86CF22B253D99009D513B /* LanguageKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageKitApp.swift; sourceTree = "<group>"; };
 		FAF86CF42B253D99009D513B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FAF86CF62B253D99009D513B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FAF86CF82B253D9B009D513B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF86CFB2B253D9B009D513B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAF86D012B253D9C009D513B /* LanguageKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LanguageKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +76,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAB08492B2CBCE60088F36F /* ApolloAPI in Frameworks */,
+				FAAB084D2B2CBCE60088F36F /* ApolloTestSupport in Frameworks */,
+				FA7E98182B35E65A00D3C5F8 /* AbsintheSocketTransport in Frameworks */,
+				FAAB08532B2D3F6A0088F36F /* ApolloWebSocket in Frameworks */,
+				FAAB08472B2CBCE60088F36F /* Apollo in Frameworks */,
+				FAAB084B2B2CBCE60088F36F /* ApolloSQLite in Frameworks */,
+				FAAB085B2B2DE52A0088F36F /* LanguageKitAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FAAB085C2B2E92C30088F36F /* LandingPage */ = {
+			isa = PBXGroup;
+			children = (
+				FAAB084E2B2D39130088F36F /* LandingPage.swift */,
+				FAAB085D2B2E93470088F36F /* Signup.graphql */,
+				FAAB085F2B2E93560088F36F /* Login.graphql */,
+			);
+			path = LandingPage;
+			sourceTree = "<group>";
+		};
 		FAF86CE62B253D99009D513B = {
 			isa = PBXGroup;
 			children = (
@@ -96,11 +136,17 @@
 		FAF86CF12B253D99009D513B /* LanguageKit */ = {
 			isa = PBXGroup;
 			children = (
-				FAF86CF22B253D99009D513B /* LanguageKitApp.swift */,
-				FAF86CF42B253D99009D513B /* ContentView.swift */,
-				FAF86CF62B253D99009D513B /* Item.swift */,
+				FAAB085C2B2E92C30088F36F /* LandingPage */,
 				FAF86CF82B253D9B009D513B /* Assets.xcassets */,
+				FAAB08542B2D40010088F36F /* Config.swift */,
+				FAAB08502B2D3EB70088F36F /* Client.swift */,
+				FA08D1312B2C60B100D63EB3 /* App.swift */,
+				FA08D1332B2C61D300D63EB3 /* GlobalState.swift */,
+				FAF86CF42B253D99009D513B /* ContentView.swift */,
+				FAAB08432B2CB87A0088F36F /* Header.swift */,
+				FAAB08402B2C8D4A0088F36F /* Pages.swift */,
 				FAF86CFA2B253D9B009D513B /* Preview Content */,
+				FA7E98192B35E6C100D3C5F8 /* HelloWorld.graphql */,
 			);
 			path = LanguageKit;
 			sourceTree = "<group>";
@@ -146,6 +192,15 @@
 			dependencies = (
 			);
 			name = LanguageKit;
+			packageProductDependencies = (
+				FAAB08462B2CBCE60088F36F /* Apollo */,
+				FAAB08482B2CBCE60088F36F /* ApolloAPI */,
+				FAAB084A2B2CBCE60088F36F /* ApolloSQLite */,
+				FAAB084C2B2CBCE60088F36F /* ApolloTestSupport */,
+				FAAB08522B2D3F6A0088F36F /* ApolloWebSocket */,
+				FAAB085A2B2DE52A0088F36F /* LanguageKitAPI */,
+				FA7E98172B35E65A00D3C5F8 /* AbsintheSocketTransport */,
+			);
 			productName = LanguageKit;
 			productReference = FAF86CEF2B253D99009D513B /* LanguageKit.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +273,11 @@
 				Base,
 			);
 			mainGroup = FAF86CE62B253D99009D513B;
+			packageReferences = (
+				FAAB08452B2CBCE60088F36F /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				FAAB08592B2DE52A0088F36F /* XCLocalSwiftPackageReference "LanguageKitAPI" */,
+				FA7E98162B35E65A00D3C5F8 /* XCRemoteSwiftPackageReference "absinthe-socket-transport" */,
+			);
 			productRefGroup = FAF86CF02B253D99009D513B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,7 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF86CFC2B253D9B009D513B /* Preview Assets.xcassets in Resources */,
+				FAAB085E2B2E93470088F36F /* Signup.graphql in Resources */,
 				FAF86CF92B253D9B009D513B /* Assets.xcassets in Resources */,
+				FA7E981A2B35E6C100D3C5F8 /* HelloWorld.graphql in Resources */,
+				FAAB08602B2E93560088F36F /* Login.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAB08442B2CB87A0088F36F /* Header.swift in Sources */,
 				FAF86CF52B253D99009D513B /* ContentView.swift in Sources */,
-				FAF86CF72B253D99009D513B /* Item.swift in Sources */,
-				FAF86CF32B253D99009D513B /* LanguageKitApp.swift in Sources */,
+				FA08D1322B2C60B100D63EB3 /* App.swift in Sources */,
+				FAAB08512B2D3EB70088F36F /* Client.swift in Sources */,
+				FAAB084F2B2D39130088F36F /* LandingPage.swift in Sources */,
+				FAAB08552B2D40010088F36F /* Config.swift in Sources */,
+				FA08D1342B2C61D300D63EB3 /* GlobalState.swift in Sources */,
+				FAAB08412B2C8D4A0088F36F /* Pages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +660,69 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		FAAB08592B2DE52A0088F36F /* XCLocalSwiftPackageReference "LanguageKitAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = LanguageKitAPI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA7E98162B35E65A00D3C5F8 /* XCRemoteSwiftPackageReference "absinthe-socket-transport" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexdaima/absinthe-socket-transport";
+			requirement = {
+				branch = "version-update";
+				kind = branch;
+			};
+		};
+		FAAB08452B2CBCE60088F36F /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA7E98172B35E65A00D3C5F8 /* AbsintheSocketTransport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA7E98162B35E65A00D3C5F8 /* XCRemoteSwiftPackageReference "absinthe-socket-transport" */;
+			productName = AbsintheSocketTransport;
+		};
+		FAAB08462B2CBCE60088F36F /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAAB08452B2CBCE60088F36F /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		FAAB08482B2CBCE60088F36F /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAAB08452B2CBCE60088F36F /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+		FAAB084A2B2CBCE60088F36F /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAAB08452B2CBCE60088F36F /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
+		};
+		FAAB084C2B2CBCE60088F36F /* ApolloTestSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAAB08452B2CBCE60088F36F /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloTestSupport;
+		};
+		FAAB08522B2D3F6A0088F36F /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAAB08452B2CBCE60088F36F /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		FAAB085A2B2DE52A0088F36F /* LanguageKitAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LanguageKitAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAF86CE72B253D99009D513B /* Project object */;
 }
