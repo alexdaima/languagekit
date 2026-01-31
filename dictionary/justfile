@@ -1,0 +1,46 @@
+# Dictionary management tasks
+
+# Default recipe to show available commands
+default:
+    @just --list
+
+# Build the project (validates CSV and creates database)
+build:
+    cargo build
+
+# Export all database tables to CSV files (backup)
+backup:
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    DB_FILE="dictionary.sqlite"
+    DATA_DIR="data"
+
+    if [ ! -f "$DB_FILE" ]; then
+        echo "❌ Database file '$DB_FILE' not found. Run 'just build' first."
+        exit 1
+    fi
+
+    echo "📦 Backing up database tables to CSV files..."
+
+    # Export concepts table
+    echo "   Exporting concepts..."
+    sqlite3 -header -csv "$DB_FILE" "SELECT id, pos, en_definition, zh_hans_definition FROM concepts ORDER BY id;" > "$DATA_DIR/concepts.csv"
+
+    # Export en_words table
+    echo "   Exporting en_words..."
+    sqlite3 -header -csv "$DB_FILE" "SELECT word, british_spelling FROM en_words ORDER BY word;" > "$DATA_DIR/en_words.csv"
+
+    # Export en_bridge table
+    echo "   Exporting en_bridge..."
+    sqlite3 -header -csv "$DB_FILE" "SELECT word, bridge FROM en_bridge ORDER BY word, bridge;" > "$DATA_DIR/en_bridge.csv"
+
+    # Export zh_hans_words table
+    echo "   Exporting zh_hans_words..."
+    sqlite3 -header -csv "$DB_FILE" "SELECT word FROM zh_hans_words ORDER BY word;" > "$DATA_DIR/zh_hans_words.csv"
+
+    # Export zh_hans_bridge table
+    echo "   Exporting zh_hans_bridge..."
+    sqlite3 -header -csv "$DB_FILE" "SELECT word, bridge, pinyin FROM zh_hans_bridge ORDER BY word, bridge;" > "$DATA_DIR/zh_hans_bridge.csv"
+
+    echo "✅ Backup complete! Files written to $DATA_DIR/"
